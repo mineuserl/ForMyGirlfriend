@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifth Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: white;
+            width: 300px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your message:</h1>
+    <p id="displayMessage"></p>
+
+    <script>
+        // Retrieve the message from localStorage
+        var message = localStorage.getItem("userMessage");
+        if (message) {
+            document.getElementById("displayMessage").innerText = message;
+        } else {
+            document.getElementById("displayMessage").innerText = "No message found.";
+        }
+    </script>
+</body>
+</html>
